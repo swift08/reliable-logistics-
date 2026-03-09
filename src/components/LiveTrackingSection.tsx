@@ -11,7 +11,7 @@ const steps = [
 const LiveTrackingSection = () => {
   return (
     <section className="section-padding bg-background">
-      <div className="container mx-auto">
+      <div className="container mx-auto w-full max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

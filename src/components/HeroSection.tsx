@@ -48,7 +48,7 @@ const HeroSection = () => {
   }, [next]);
 
   return (
-    <section className="relative h-[100vh] min-h-[600px] overflow-hidden">
+    <section className="relative h-[100vh] min-h-[600px] w-full overflow-hidden left-0 right-0">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -56,12 +56,12 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.98 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0"
+          className="absolute inset-0 left-0 right-0 w-full min-w-0"
         >
           <img
             src={slides[current].image}
             alt={slides[current].headline}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover min-w-0"
             fetchPriority="high"
             loading="eager"
             decoding="async"
@@ -69,12 +69,12 @@ const HeroSection = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 hero-gradient-overlay" />
+      {/* Overlay - full width */}
+      <div className="absolute inset-0 left-0 right-0 w-full hero-gradient-overlay" />
 
-      {/* Content */}
-      <div className="absolute inset-0 flex items-center">
-        <div className="container mx-auto px-6 lg:px-16">
+      {/* Content - always centered on all screens */}
+      <div className="absolute inset-0 left-0 right-0 w-full flex items-center justify-center px-4 sm:px-6">
+        <div className="w-full max-w-2xl flex justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -82,15 +82,15 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-2xl"
+              className="w-full text-center"
             >
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight whitespace-pre-line mb-6">
                 {slides[current].headline}
               </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/80 font-body mb-10 max-w-lg">
+              <p className="text-lg md:text-xl text-primary-foreground/80 font-body mb-10 max-w-lg mx-auto">
                 {slides[current].subtext}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
                   <a href="https://www.reliable-logistics.com/Logistic/Mobile/Tracker" target="_blank" rel="noopener noreferrer">
                     Track Shipment

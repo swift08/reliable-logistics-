@@ -48,9 +48,9 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border w-full"
     >
-      <div className="container mx-auto flex items-center justify-between h-16 px-6">
+      <div className="w-full flex items-center justify-between h-16 px-4 sm:px-6">
         <Link to="/" className="flex items-center gap-2">
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
             <span className="text-primary-foreground font-display font-bold text-lg">R</span>
@@ -86,7 +86,7 @@ const Navbar = () => {
           animate={{ opacity: 1, height: "auto" }}
           className="md:hidden bg-background border-b border-border"
         >
-          <div className="container mx-auto px-6 py-4 space-y-4">
+          <div className="w-full px-4 py-4 space-y-4">
             {navLinks.map((link) =>
               link.external ? (
                 <a

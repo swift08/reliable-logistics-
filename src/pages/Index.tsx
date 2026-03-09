@@ -21,7 +21,7 @@ const Index = () => {
   }, [hash]);
 
   return (
-    <div id="top" className="min-h-screen bg-background">
+    <div id="top" className="min-h-screen bg-background w-full overflow-x-hidden min-w-0">
       <Navbar />
       <ErrorBoundary>
         <HeroSection />

@@ -3,7 +3,7 @@ import impactImage from "@/assets/impact-night.jpg";
 
 const ImpactSection = () => {
   return (
-    <section className="relative h-[500px] md:h-[600px] overflow-hidden">
+    <section className="relative h-[500px] md:h-[600px] overflow-hidden w-full max-w-full">
       <img
         src={impactImage}
         alt="Logistics operations at night"
@@ -13,13 +13,13 @@ const ImpactSection = () => {
       />
       <div className="absolute inset-0 bg-section-dark/70" />
 
-      <div className="absolute inset-0 flex items-center justify-center text-center">
+      <div className="absolute inset-0 flex items-center justify-center text-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl px-6"
+          className="max-w-3xl w-full"
         >
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-section-dark-foreground leading-tight mb-6">
             While The World Sleeps,{" "}

@@ -17,7 +17,7 @@ const VisionValuesSection = () => {
 
   return (
     <section id="about" className="section-padding bg-background scroll-mt-20">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-5xl w-full max-w-full">
         {/* Tagline & Title */}
         <div className="text-center mb-10">
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground font-body mb-1">

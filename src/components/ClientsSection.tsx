@@ -22,8 +22,8 @@ const ClientsSection = () => {
   const markFailed = (name: string) => setFailed((prev) => new Set(prev).add(name));
 
   return (
-    <section className="section-padding bg-secondary overflow-hidden">
-      <div className="container mx-auto">
+    <section className="section-padding bg-secondary overflow-hidden w-full max-w-full">
+      <div className="container mx-auto w-full max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
