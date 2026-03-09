@@ -1,0 +1,168 @@
+/* Fonts loaded via index.html preload for non-blocking render */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+
+    --primary: 358 81% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 11%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 358 81% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 358 81% 50%;
+
+    --radius: 0.5rem;
+
+    --hero-overlay: linear-gradient(to right, hsla(0, 0%, 0%, 0.7) 0%, hsla(0, 0%, 0%, 0.3) 60%, transparent 100%);
+    --section-dark: 0 0% 11%;
+    --section-dark-foreground: 0 0% 96%;
+    --highlight: 358 81% 50%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 358 81% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 358 81% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 358 81% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+    line-height: 1.25;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 0.7;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-6 md:py-8;
+  }
+
+  .hero-gradient-overlay {
+    background: var(--hero-overlay);
+  }
+
+  .text-gradient-red {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(358, 81%, 50%), hsl(358, 81%, 65%));
+  }
+
+  .feature-card {
+    @apply bg-card rounded-xl p-6 border border-border transition-all duration-300;
+  }
+
+  .feature-card:hover {
+    @apply shadow-xl -translate-y-1 border-primary/30;
+  }
+}
+
+@layer utilities {
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out both;
+  }
+
+  .animate-slide-up-delay-1 {
+    animation: slideUp 0.6s ease-out 0.15s both;
+  }
+
+  .animate-slide-up-delay-2 {
+    animation: slideUp 0.6s ease-out 0.3s both;
+  }
+
+  .animate-slide-up-delay-3 {
+    animation: slideUp 0.6s ease-out 0.45s both;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
