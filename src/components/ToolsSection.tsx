@@ -52,29 +52,31 @@ const ToolsSection = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto bg-card border border-border rounded-2xl shadow-xl overflow-visible"
         >
-          {/* Tabs */}
-          <div className="grid grid-cols-3 border-b border-border">
+          {/* Tabs: stacked full-width on mobile, row on md+; center-aligned, no truncation */}
+          <div className="flex flex-col sm:grid sm:grid-cols-3 border-b border-border">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setTab(tab.id)}
-                  className={`flex items-center justify-center gap-2 p-4 text-sm font-body font-semibold transition-all min-w-0 ${
+                  className={`flex items-center justify-center gap-2 p-4 text-sm font-body font-semibold transition-all min-w-0 text-center ${
                     isActive
                       ? "bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-sm"
                       : "text-muted-foreground hover:bg-secondary"
                   }`}
                 >
-                  <tab.icon size={18} className={isActive ? "text-white shrink-0" : "shrink-0"} />
-                  <span className={isActive ? "text-white truncate" : "truncate"}>{tab.label}</span>
+                  <tab.icon size={18} className={`shrink-0 ${isActive ? "text-white" : ""}`} />
+                  <span className={`min-w-0 break-words whitespace-normal ${isActive ? "text-white" : ""}`}>
+                    {tab.label}
+                  </span>
                 </button>
               );
             })}
           </div>
 
-          {/* Content - min-height so tab content always has space */}
-          <div className="p-8 min-h-[280px]">
+          {/* Content - min-height so tab content always has space; responsive padding */}
+          <div className="p-4 sm:p-6 md:p-8 min-h-[260px] sm:min-h-[280px]">
             {activeTab === "track" && (
               <div key="track" className="space-y-4">
                 <label className="text-sm font-body font-semibold text-foreground">Tracking Number</label>
