@@ -75,9 +75,9 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 id="services-heading" className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+          <h1 id="services-heading" className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             Our Services
-          </h2>
+          </h1>
           <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto">
             End-to-end logistics tailored to your business, from first-mile pickup to last-mile delivery, with full visibility and support.
           </p>

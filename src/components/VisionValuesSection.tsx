@@ -49,10 +49,10 @@ const VisionValuesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-14 md:mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground tracking-tight max-w-3xl mx-auto leading-[1.15]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground tracking-tight max-w-3xl mx-auto leading-[1.15]">
             Reliable Logistics{" "}
             <span className="text-primary">Fostering Stronger Connections</span>
-          </h2>
+          </h1>
           <p className="text-muted-foreground font-body mt-4 max-w-lg mx-auto text-base">
             Our story, our promise, and what we stand for.
           </p>
