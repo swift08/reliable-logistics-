@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-// Logos from public/clients
 const publicClients = [
   { name: "ABB", logo: "/clients/abb.webp" },
   { name: "BHEL", logo: "/clients/BHEL.png" },
@@ -10,7 +9,6 @@ const publicClients = [
   { name: "Zuari Cement", logo: "/clients/ZUARI-cement.png" },
 ];
 
-// Logos from src/assets/companies (imported via Vite glob)
 const companyModules = import.meta.glob("../assets/companies/*", { eager: true });
 const assetClients = Object.entries(companyModules).map(([path, mod]) => {
   const name = path.split("/").pop()?.replace(/\.[^.]+$/, "").replace(/^id[-_a-zA-Z0-9]+_?/, "") || "Client";
@@ -19,8 +17,6 @@ const assetClients = Object.entries(companyModules).map(([path, mod]) => {
 });
 
 const clients = [...publicClients, ...assetClients];
-
-// Duplicate for seamless loop (news ticker: one behind another)
 const clientsLoop = [...clients, ...clients];
 
 const ClientsSection = () => {

@@ -12,7 +12,6 @@ const SustainabilitySection = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center"
         >
-          {/* Left: Text + buttons */}
           <div className="order-2 lg:order-1">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-emerald-700 mb-3">
               Sustainability
@@ -46,7 +45,6 @@ const SustainabilitySection = () => {
               </a>
             </div>
           </div>
-          {/* Right: Image */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="group relative w-full max-w-xl rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-2xl hover:ring-emerald-200/50">
               <img

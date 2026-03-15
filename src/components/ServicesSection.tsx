@@ -83,7 +83,6 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        {/* Core capabilities */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
           <h3 className="text-xl font-display font-bold text-foreground mb-6 text-center">Core Capabilities</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -106,7 +105,6 @@ const ServicesSection = () => {
           </div>
         </motion.div>
 
-        {/* How we deliver - Air, Rail, Road with images */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-14">
           <h3 className="text-xl font-display font-bold text-foreground mb-6 text-center">How We Deliver</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -145,7 +143,6 @@ const ServicesSection = () => {
           </div>
         </motion.div>
 
-        {/* Specialized transport */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -182,7 +179,6 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        {/* Warehousing & storage - merged */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

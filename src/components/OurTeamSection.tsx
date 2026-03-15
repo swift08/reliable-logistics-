@@ -32,7 +32,6 @@ const OurTeamSection = () => {
           </p>
         </motion.div>
 
-        {/* Leadership - company heads */}
         <div className="mb-16">
           <h3 className="text-xl font-display font-bold text-foreground mb-8 text-center">Leadership</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -67,7 +66,6 @@ const OurTeamSection = () => {
           </div>
         </div>
 
-        {/* Departments - group + name */}
         <div>
           <h3 className="text-xl font-display font-bold text-foreground mb-8 text-center">Departments</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">

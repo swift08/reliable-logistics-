@@ -50,7 +50,6 @@ const ToolsSection = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto bg-card border border-border rounded-2xl shadow-xl overflow-visible"
         >
-          {/* Tabs: Location Finder | Transit Time & Price Finder */}
           <div className="flex flex-col sm:grid sm:grid-cols-2 border-b border-border">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id;
@@ -73,16 +72,13 @@ const ToolsSection = () => {
             })}
           </div>
 
-          {/* Content - min-height so tab content always has space; responsive padding */}
           <div className="p-4 sm:p-6 md:p-8 min-h-[260px] sm:min-h-[280px]">
             {activeTab === "location" && (
               <div key="location">
-                {/* Gradient banner */}
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-lg px-4 py-4 mb-6">
                   <Globe className="h-5 w-5 text-white shrink-0" />
                   <span className="font-display font-semibold text-white text-base">Location Finder</span>
                 </div>
-                {/* White content area: input + radio row */}
                 <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
                   <Input
                     id="tools-location-input"
@@ -149,12 +145,10 @@ const ToolsSection = () => {
             )}
             {activeTab === "transit" && (
               <div key="transit" className="relative bg-gray-100/90 rounded-xl p-6 -m-2">
-                {/* Gradient header */}
                 <div className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-lg px-4 py-3 mb-4">
                   <Clock className="h-5 w-5 text-white shrink-0" />
                   <span className="font-display font-semibold text-white">Transit Time & Price Finder</span>
                 </div>
-                {/* Green X - top right */}
                 <button
                   type="button"
                   onClick={() => setTab("location")}
@@ -163,7 +157,6 @@ const ToolsSection = () => {
                 >
                   <X className="h-5 w-5" />
                 </button>
-                {/* Row 1: From Pincode | To Pincode | Weight | VOLUME WEIGHT CALCULATOR */}
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-end">
                   <div className="sm:col-span-3">
                     <Label className="text-sm font-body font-semibold text-foreground">From Pincode*</Label>
@@ -205,7 +198,6 @@ const ToolsSection = () => {
                     </Button>
                   </div>
                 </div>
-                {/* Row 2: Booking Date | Booking Time */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                   <div>
                     <Label className="text-sm font-body font-semibold text-foreground">Booking Date*</Label>

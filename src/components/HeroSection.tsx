@@ -63,10 +63,8 @@ const HeroSection = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Overlay - full width */}
       <div className="absolute inset-0 left-0 right-0 w-full hero-gradient-overlay" />
 
-      {/* Content - always centered on all screens */}
       <div className="absolute inset-0 left-0 right-0 w-full flex items-center justify-center px-4 sm:px-6">
         <div className="w-full max-w-2xl flex justify-center">
           <AnimatePresence mode="wait">
@@ -99,7 +97,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Navigation arrows - above MissionBar overlap */}
       <div className="absolute bottom-24 right-4 sm:right-8 flex gap-3 z-10">
         <button
           type="button"
@@ -119,7 +116,6 @@ const HeroSection = () => {
         </button>
       </div>
 
-      {/* Slide indicators */}
       <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 z-10" role="tablist" aria-label="Slide indicators">
         {slides.map((_, i) => (
           <button

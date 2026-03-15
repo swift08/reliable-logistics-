@@ -7,7 +7,6 @@ import logoImage from "@/assets/logo.png";
 
 const TRACKER_URL = "https://www.reliable-logistics.com/Logistic/Mobile/Tracker";
 
-// Order: Home → Services → About (single page) → Tools → Track → Contact
 const NAV_ORDER = [
   "Home",
   "Services",
@@ -74,7 +73,6 @@ const Navbar = () => {
           <img src={logoImage} alt="Reliable Logistics" className="h-12 w-auto max-w-[220px] object-contain" />
         </Link>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <span key={link.label}>{renderLink(link)}</span>
@@ -89,13 +87,11 @@ const Navbar = () => {
           <Button variant="default" size="sm">Get Quote</Button>
         </div>
 
-        {/* Mobile toggle */}
         <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}

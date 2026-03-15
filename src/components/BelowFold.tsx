@@ -13,11 +13,6 @@ import SustainabilitySection from "@/components/SustainabilitySection";
 import LiveTrackingSection from "@/components/LiveTrackingSection";
 import Footer from "@/components/Footer";
 
-/**
- * Homepage flow: Pillars → Quick tools → Story → Tools → Why us → Testimonials →
- * Track record → Pan India → Clients → Stats → Impact → Sustainability → Footer.
- * Services are on the dedicated /services page.
- */
 const BelowFold = () => (
   <>
     <MissionBar />

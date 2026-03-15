@@ -29,7 +29,6 @@ const LiveTrackingSection = () => {
 
           <div className="w-full flex-1 flex flex-col justify-center">
             <div className="w-full">
-            {/* Single horizontal track with one line through the dots */}
             <div className="relative flex flex-nowrap">
               <div
                 className="absolute left-0 right-0 top-4 h-0.5 bg-border rounded-full"

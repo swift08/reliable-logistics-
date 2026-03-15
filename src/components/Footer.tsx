@@ -7,7 +7,6 @@ const MAP_EMBED_QUERY = "SER+Logistics+Park,+Survey+No.34,+Madanayakanahalli,+Da
 const Footer = () => {
   return (
     <footer id="contact" className="bg-section-dark text-section-dark-foreground scroll-mt-20">
-      {/* Certification & contact strip */}
       <div className="bg-white text-gray-900">
         <div className="section-container px-4 sm:px-6 py-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 md:divide-x md:divide-gray-200 items-start justify-items-center md:justify-items-stretch">
@@ -31,7 +30,6 @@ const Footer = () => {
 
       <div className="section-container px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
-          {/* Brand */}
           <div className="min-w-0">
             <div className="flex items-center justify-start mb-4">
               <img src={logoImage} alt="Reliable Logistics" className="h-10 w-auto max-w-[160px] object-contain" />
@@ -41,7 +39,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Company */}
           <div className="min-w-0">
             <h4 className="font-display font-bold text-base mb-4 text-left">Company</h4>
             <ul className="space-y-2 text-sm font-body text-section-dark-foreground/60">
@@ -52,7 +49,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Tools */}
           <div className="min-w-0">
             <h4 className="font-display font-bold text-base mb-4 text-left">Quick Tools</h4>
             <ul className="space-y-2 text-sm font-body text-section-dark-foreground/60">
@@ -63,7 +59,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div className="min-w-0">
             <h4 className="font-display font-bold text-base mb-4 text-left">Contact</h4>
             <ul className="space-y-3 text-sm font-body text-section-dark-foreground/60">
@@ -76,7 +71,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Head Office & Mini Map */}
         <div className="mt-8 pt-8 border-t border-section-dark-foreground/10 grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
           <div className="lg:col-span-2 min-w-0">
             <h4 className="font-display font-bold text-base mb-4 flex items-center gap-2 text-left">

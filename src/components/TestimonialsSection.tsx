@@ -19,7 +19,6 @@ const testimonials = [
   },
 ];
 
-// Duplicate for seamless loop
 const testimonialsLoop = [...testimonials, ...testimonials];
 
 const TestimonialsSection = () => {
@@ -38,7 +37,6 @@ const TestimonialsSection = () => {
           <p className="text-muted-foreground font-body mt-2">Testimonials from our esteemed clients</p>
         </motion.div>
 
-        {/* News ticker: horizontal scroll */}
         <div className="relative w-full [contain:layout_paint]">
           <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-secondary to-transparent z-10 pointer-events-none" aria-hidden />
           <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-secondary to-transparent z-10 pointer-events-none" aria-hidden />

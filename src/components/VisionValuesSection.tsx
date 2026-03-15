@@ -43,7 +43,6 @@ const VisionValuesSection = () => {
   return (
     <section id="about" className="scroll-mt-20 bg-background">
       <div className="mx-auto max-w-6xl w-full px-4 sm:px-6 py-16 md:py-24">
-        {/* Editorial header */}
         <motion.header
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +57,6 @@ const VisionValuesSection = () => {
             Our story, our promise, and what we stand for.
           </p>
 
-          {/* In-page nav */}
           <nav className="mt-10 flex flex-wrap justify-center gap-2" aria-label="Section navigation">
             {NAV_ITEMS.map((item) => {
               const Icon = item.icon;
@@ -77,7 +75,6 @@ const VisionValuesSection = () => {
         </motion.header>
 
         <div className="space-y-0">
-          {/* Block 1: About Us */}
           <motion.div
             id="about-us"
             {...fadeIn}
@@ -102,7 +99,6 @@ const VisionValuesSection = () => {
             </div>
           </motion.div>
 
-          {/* Block 2: Why Choose Us */}
           <motion.div
             id="why-choose-us"
             {...fadeIn}
@@ -141,13 +137,11 @@ const VisionValuesSection = () => {
             </ul>
           </motion.div>
 
-          {/* Block 3: Mission + Vision (same container) */}
           <motion.div
             {...fadeIn}
             className="py-12 md:py-16 border-b border-border"
           >
             <div className="grid md:grid-cols-2 gap-10 lg:gap-14">
-              {/* Mission */}
               <div id="mission" className="max-w-xl">
                 <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
                   Our Mission
@@ -162,7 +156,6 @@ const VisionValuesSection = () => {
                   responsibility and positive social impact.
                 </p>
               </div>
-              {/* Vision */}
               <div id="vision" className="max-w-xl">
                 <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
                   Our Vision

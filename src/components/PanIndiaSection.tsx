@@ -40,7 +40,6 @@ const PanIndiaSection = () => {
   return (
     <section className="section-padding bg-secondary">
       <div className="section-container">
-        {/* Heading (left on desktop) + Map (right on desktop); stacked centered on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +68,6 @@ const PanIndiaSection = () => {
           </div>
         </motion.div>
 
-        {/* Zonal offices horizontal news-ticker loop */}
         <div className="relative overflow-hidden [contain:layout_paint]">
           <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-secondary to-transparent z-10 pointer-events-none" aria-hidden />
           <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-secondary to-transparent z-10 pointer-events-none" aria-hidden />
