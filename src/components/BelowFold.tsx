@@ -2,7 +2,6 @@ import MissionBar from "@/components/MissionBar";
 import FeatureBar from "@/components/FeatureBar";
 import ServicesSection from "@/components/ServicesSection";
 import StorySection from "@/components/StorySection";
-import VisionValuesSection from "@/components/VisionValuesSection";
 import ToolsSection from "@/components/ToolsSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -22,12 +21,11 @@ const BelowFold = () => (
     <div id="services" className="pt-4 scroll-mt-20">
       <ServicesSection />
     </div>
+    <div id="tools" className="scroll-mt-20">
+      <ToolsSection />
+    </div>
     <div id="story">
       <StorySection />
-    </div>
-    <VisionValuesSection />
-    <div id="tools">
-      <ToolsSection />
     </div>
     <WhyChooseSection />
     <TestimonialsSection />

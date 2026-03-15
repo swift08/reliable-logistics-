@@ -3,19 +3,18 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Package, Clock, Globe, Info, X } from "lucide-react";
+import { Clock, Globe, Info, X } from "lucide-react";
 
-const TAB_IDS = ["track", "location", "transit"] as const;
+const TAB_IDS = ["location", "transit"] as const;
 type TabId = (typeof TAB_IDS)[number];
 
-const tabs: { id: TabId; label: string; icon: typeof Package }[] = [
-  { id: "track", label: "Track Shipment", icon: Package },
+const tabs: { id: TabId; label: string; icon: typeof Globe }[] = [
   { id: "location", label: "Location Finder", icon: Globe },
   { id: "transit", label: "Transit Time & Price Finder", icon: Clock },
 ];
 
 const ToolsSection = () => {
-  const [activeTab, setActiveTab] = useState<TabId>("track");
+  const [activeTab, setActiveTab] = useState<TabId>("location");
 
   const setTab = (id: string) => {
     if (TAB_IDS.includes(id as TabId)) setActiveTab(id as TabId);
@@ -52,8 +51,8 @@ const ToolsSection = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto bg-card border border-border rounded-2xl shadow-xl overflow-visible"
         >
-          {/* Tabs: stacked full-width on mobile, row on md+; center-aligned, no truncation */}
-          <div className="flex flex-col sm:grid sm:grid-cols-3 border-b border-border">
+          {/* Tabs: Location Finder | Transit Time & Price Finder */}
+          <div className="flex flex-col sm:grid sm:grid-cols-2 border-b border-border">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id;
               return (
@@ -77,17 +76,6 @@ const ToolsSection = () => {
 
           {/* Content - min-height so tab content always has space; responsive padding */}
           <div className="p-4 sm:p-6 md:p-8 min-h-[260px] sm:min-h-[280px]">
-            {activeTab === "track" && (
-              <div key="track" className="space-y-4">
-                <label className="text-sm font-body font-semibold text-foreground">Tracking Number</label>
-                <Input placeholder="Enter your AWB / tracking number" className="h-12" />
-                <Button variant="default" size="lg" className="w-full" asChild>
-                  <a href="https://www.reliable-logistics.com/Logistic/Mobile/Tracker" target="_blank" rel="noopener noreferrer">
-                    Track Now
-                  </a>
-                </Button>
-              </div>
-            )}
             {activeTab === "location" && (
               <div key="location">
                 {/* Gradient banner */}
@@ -170,7 +158,7 @@ const ToolsSection = () => {
                 {/* Green X - top right */}
                 <button
                   type="button"
-                  onClick={() => setTab("track")}
+                  onClick={() => setTab("location")}
                   className="absolute top-4 right-4 p-1.5 text-emerald-600 hover:bg-emerald-100 rounded-full transition-colors"
                   aria-label="Close"
                 >

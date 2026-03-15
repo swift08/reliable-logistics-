@@ -21,7 +21,7 @@ const missions = [
 
 const MissionBar = () => {
   return (
-    <section className="relative -mt-12 z-10 section-padding !py-0 pb-4 md:pb-5 w-full max-w-full">
+    <section className="relative z-10 section-padding pt-8 pb-4 md:pb-5 w-full max-w-full">
       <div className="container mx-auto w-full max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

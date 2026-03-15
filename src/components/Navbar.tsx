@@ -6,14 +6,26 @@ import { Button } from "@/components/ui/button";
 
 const TRACKER_URL = "https://www.reliable-logistics.com/Logistic/Mobile/Tracker";
 
-const navLinks = [
-  { label: "Home", href: "/", external: false },
-  { label: "About", href: "/#about", external: false },
-  { label: "Services", href: "/#services", external: false },
-  { label: "Core Strengths", href: "/core-strengths", external: false },
-  { label: "Track", href: TRACKER_URL, external: true },
-  { label: "Contact", href: "/#contact", external: false },
-];
+// Order: Home → Services → About (single page) → Tools → Track → Contact
+const NAV_ORDER = [
+  "Home",
+  "Services",
+  "About",
+  "Tools",
+  "Track",
+  "Contact",
+] as const;
+
+const navLinksMap = {
+  Home: { href: "/", external: false as const },
+  About: { href: "/about", external: false as const },
+  Services: { href: "/#services", external: false as const },
+  Tools: { href: "/#tools", external: false as const },
+  Track: { href: TRACKER_URL, external: true as const },
+  Contact: { href: "/#contact", external: false as const },
+};
+
+const navLinks = NAV_ORDER.map((label) => ({ label, ...navLinksMap[label] }));
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -32,7 +44,7 @@ const Navbar = () => {
         </a>
       );
     }
-    const isActive = link.href === "/core-strengths" ? location.pathname === "/core-strengths" : link.href === "/" && location.pathname === "/";
+    const isActive = link.href === "/about" ? location.pathname === "/about" : link.href === "/" ? location.pathname === "/" : false;
     return (
       <Link
         to={link.href}

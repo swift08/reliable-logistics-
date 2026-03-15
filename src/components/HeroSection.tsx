@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 
 import heroTruck from "@/assets/hero-truck-sunrise.jpg";
 import heroAirplane from "@/assets/hero-airplane.jpg";
-import heroShip from "@/assets/hero-ship.jpg";
 import heroVan from "@/assets/hero-delivery-van.jpg";
 
 const slides = [
@@ -23,11 +22,6 @@ const slides = [
     image: heroAirplane,
     headline: "Air Freight That Moves At The Speed Of Business",
     subtext: "Express air cargo services connecting cities nationwide.",
-  },
-  {
-    image: heroShip,
-    headline: "Global Shipping. Local Commitment.",
-    subtext: "International freight solutions with end-to-end tracking and care.",
   },
   {
     image: heroVan,
@@ -62,7 +56,7 @@ const HeroSection = () => {
             src={slides[current].image}
             alt={slides[current].headline}
             className="w-full h-full object-cover min-w-0"
-            fetchPriority="high"
+            fetchpriority="high"
             loading="eager"
             decoding="async"
           />
@@ -96,8 +90,8 @@ const HeroSection = () => {
                     Track Shipment
                   </a>
                 </Button>
-                <Button variant="heroOutline" size="xl">
-                  Get Transit Time
+                <Button variant="heroOutline" size="xl" asChild>
+                  <a href="#tools">Get Transit Time</a>
                 </Button>
               </div>
             </motion.div>
@@ -105,8 +99,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Navigation arrows */}
-      <div className="absolute bottom-8 right-8 flex gap-3">
+      {/* Navigation arrows - above MissionBar overlap */}
+      <div className="absolute bottom-24 right-4 sm:right-8 flex gap-3 z-10">
         <button
           type="button"
           onClick={prev}
@@ -126,7 +120,7 @@ const HeroSection = () => {
       </div>
 
       {/* Slide indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2" role="tablist" aria-label="Slide indicators">
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 z-10" role="tablist" aria-label="Slide indicators">
         {slides.map((_, i) => (
           <button
             key={i}

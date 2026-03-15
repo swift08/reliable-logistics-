@@ -16,7 +16,7 @@ const StorySection = () => {
             <img
               src={storyImage}
               alt="Delivery person handing package to customer"
-              className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+              className="w-full h-auto max-w-full object-contain hover:scale-105 transition-transform duration-700"
               loading="lazy"
               decoding="async"
             />
