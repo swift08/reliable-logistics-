@@ -13,8 +13,8 @@ const tools = [
 
 const FeatureBar = () => {
   return (
-    <section className="relative z-10 section-padding pt-4 pb-4 md:pt-5 md:pb-5 w-full max-w-full">
-      <div className="container mx-auto w-full max-w-full">
+    <section className="relative z-10 section-padding pt-4 pb-4 md:pt-5 md:pb-5">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

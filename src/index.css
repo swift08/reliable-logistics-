@@ -12,11 +12,16 @@
   }
 
   body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+    @apply bg-background text-foreground font-body antialiased;
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
   }
 
   #root {
@@ -24,6 +29,12 @@
     max-width: 100%;
     min-width: 0;
     overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 
   :root {
@@ -100,20 +111,6 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground font-body antialiased;
-    font-size: 1rem;
-    line-height: 1.6;
-    letter-spacing: 0.01em;
-    box-sizing: border-box;
-  }
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-semibold tracking-tight;
     line-height: 1.25;
@@ -132,6 +129,10 @@
 @layer components {
   .section-padding {
     @apply px-4 sm:px-6 lg:px-8 py-6 md:py-8 w-full max-w-full;
+  }
+
+  .section-container {
+    @apply container mx-auto w-full max-w-full;
   }
 
   .hero-gradient-overlay {

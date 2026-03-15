@@ -9,7 +9,7 @@ const Footer = () => {
     <footer id="contact" className="bg-section-dark text-section-dark-foreground scroll-mt-20">
       {/* Certification & contact strip */}
       <div className="bg-white text-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 py-6 w-full max-w-full">
+        <div className="section-container px-4 sm:px-6 py-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 md:divide-x md:divide-gray-200 items-start justify-items-center md:justify-items-stretch">
             <div className="text-center md:text-left w-full min-w-0">
               <p className="font-display font-bold text-lg text-red-600">ISO 9001:2015</p>
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 py-8 w-full max-w-full">
+      <div className="section-container px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
           {/* Brand */}
           <div className="min-w-0">

@@ -21,8 +21,8 @@ const missions = [
 
 const MissionBar = () => {
   return (
-    <section className="relative z-10 section-padding pt-8 pb-4 md:pb-5 w-full max-w-full" aria-labelledby="pillars-heading">
-      <div className="container mx-auto w-full max-w-full">
+    <section className="relative z-10 section-padding pt-8 pb-4 md:pb-5" aria-labelledby="pillars-heading">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

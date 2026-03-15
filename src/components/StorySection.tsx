@@ -4,7 +4,7 @@ import storyImage from "@/assets/story-delivery.jpg";
 const StorySection = () => {
   return (
     <section className="section-padding bg-secondary">
-      <div className="container mx-auto w-full max-w-full">
+      <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}

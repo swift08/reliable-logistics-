@@ -5,7 +5,7 @@ import greenBussuImage from "@/assets/green bussu.png";
 const SustainabilitySection = () => {
   return (
     <section className="section-padding bg-white scroll-mt-20 overflow-hidden">
-      <div className="container mx-auto w-full max-w-full px-4 sm:px-6">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

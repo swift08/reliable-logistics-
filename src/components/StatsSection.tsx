@@ -8,8 +8,8 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="section-padding bg-primary text-primary-foreground w-full max-w-full">
-      <div className="container mx-auto w-full max-w-full">
+    <section className="section-padding bg-primary text-primary-foreground">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

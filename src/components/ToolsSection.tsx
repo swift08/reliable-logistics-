@@ -32,7 +32,7 @@ const ToolsSection = () => {
 
   return (
     <section className="section-padding bg-background">
-      <div className="container mx-auto w-full max-w-full">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

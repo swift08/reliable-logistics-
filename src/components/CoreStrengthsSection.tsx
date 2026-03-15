@@ -32,7 +32,7 @@ const STRENGTHS = [
 const CoreStrengthsSection = () => {
   return (
     <section id="core-strengths" className="section-padding bg-background scroll-mt-20">
-      <div className="container mx-auto w-full max-w-full">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

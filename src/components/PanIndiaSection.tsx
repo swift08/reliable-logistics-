@@ -39,7 +39,7 @@ const ZONAL_OFFICES_LOOP = [...ZONAL_OFFICES, ...ZONAL_OFFICES];
 const PanIndiaSection = () => {
   return (
     <section className="section-padding bg-secondary">
-      <div className="container mx-auto w-full max-w-full">
+      <div className="section-container">
         {/* Heading (left on desktop) + Map (right on desktop); stacked centered on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
