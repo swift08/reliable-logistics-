@@ -9,6 +9,7 @@ import {
   Ship,
   Zap,
   Warehouse,
+  Check,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -44,10 +45,97 @@ const CoreStrengthsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-widest font-body">Core Strengths</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-3 uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground uppercase tracking-tight">
             Our Core Strengths
           </h2>
+        </motion.div>
+
+        {/* Strategic Sector - two columns matching slide */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 p-6 md:p-8 rounded-2xl bg-card border border-border"
+        >
+          {/* Left: Government & Strategic Sector Deliveries */}
+          <div>
+            <h3 className="text-xl font-display font-bold text-foreground mb-2 border-b-2 border-primary pb-1 inline-block">
+              Extensive Experience in Government & Strategic Sector Deliveries
+            </h3>
+            <p className="text-muted-foreground font-body leading-relaxed mt-4 mb-6">
+              Our deep understanding of regulatory requirements and secure handling protocols makes us the partner of choice for highly sensitive Government and Defense operations.
+            </p>
+            <ul className="space-y-2">
+              {[
+                "High-security protocols for classified materials.",
+                "End-to-end escort and surveillance capabilities.",
+                "Strict adherence to compliance and regulatory standards.",
+                "Proven track record with PSU and Defense ministries.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-muted-foreground font-body text-sm">
+                  <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Right: Specific Delivery Locations & Facilities */}
+          <div>
+            <h3 className="text-xl font-display font-bold text-primary mb-6 border-t-2 border-primary pt-6 lg:border-t-0 lg:pt-0 lg:border-l-2 lg:pl-8 lg:border-l-primary">
+              Specific Delivery Locations & Facilities
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Indian Railway Loco Sheds",
+                "SEZ Deliveries",
+                "Indian Air Force Bases & Naval Stations",
+                "Shipyards & Material Organisation Depots",
+                "HAL & BHEL Plants",
+                "Solar Energy Plants & Critical Infrastructure",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-muted-foreground font-body text-sm">
+                  <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
+
+        {/* Specialized Capabilities - two columns, checkmark bullets */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 p-6 md:p-8 rounded-2xl bg-card border border-border"
+        >
+          <h3 className="text-xl font-display font-bold text-foreground border-b-2 border-primary pb-1 inline-block lg:col-span-2 mb-2">
+            Specialized Capabilities
+          </h3>
+          <ul className="space-y-2 lg:col-span-1 lg:mt-4">
+            {[
+              "Secure handling of high-value and mission-critical industrial equipment",
+              "Strict compliance with Defence, PSU, and plant-level documentation protocols",
+              "Time-bound execution for plant shutdown projects and urgent consignments",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2 text-muted-foreground font-body text-sm">
+                <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <ul className="space-y-2 lg:col-span-1 lg:mt-4">
+            {[
+              "Multi-modal logistics support (Rail | Road | Air)",
+              "Dedicated coordination for restricted-entry and high-security zones",
+              "Complete alignment with client-specific SOPs by adopting and strictly following their operational protocols",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2 text-muted-foreground font-body text-sm">
+                <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-2 mb-10">

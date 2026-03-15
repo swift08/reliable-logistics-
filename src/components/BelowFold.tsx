@@ -1,38 +1,44 @@
 import MissionBar from "@/components/MissionBar";
 import FeatureBar from "@/components/FeatureBar";
-import ServicesSection from "@/components/ServicesSection";
+import PanIndiaSection from "@/components/PanIndiaSection";
 import StorySection from "@/components/StorySection";
 import ToolsSection from "@/components/ToolsSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import TrackRecordSection from "@/components/TrackRecordSection";
 import ClientsSection from "@/components/ClientsSection";
 import StatsSection from "@/components/StatsSection";
 import ImpactSection from "@/components/ImpactSection";
+import SustainabilitySection from "@/components/SustainabilitySection";
 import LiveTrackingSection from "@/components/LiveTrackingSection";
 import Footer from "@/components/Footer";
 
 /**
- * Below-the-fold content loaded lazily so the initial page (Navbar + Hero) loads fast.
+ * Homepage flow: Pillars → Quick tools → Story → Tools → Why us → Testimonials →
+ * Track record → Pan India → Clients → Stats → Impact → Sustainability → Footer.
+ * Services are on the dedicated /services page.
  */
 const BelowFold = () => (
   <>
     <MissionBar />
     <FeatureBar />
-    <div id="services" className="pt-4 scroll-mt-20">
-      <ServicesSection />
-    </div>
+    <section id="story" className="scroll-mt-20">
+      <StorySection />
+    </section>
     <div id="tools" className="scroll-mt-20">
       <ToolsSection />
     </div>
-    <div id="story">
-      <StorySection />
-    </div>
     <WhyChooseSection />
     <TestimonialsSection />
+    <TrackRecordSection />
+    <PanIndiaSection />
     <ClientsSection />
     <StatsSection />
-    <ImpactSection />
-    <LiveTrackingSection />
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-0 w-full max-w-full overflow-hidden">
+      <ImpactSection />
+      <LiveTrackingSection />
+    </section>
+    <SustainabilitySection />
     <Footer />
   </>
 );

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@/assets/logo.png";
 
 const TRACKER_URL = "https://www.reliable-logistics.com/Logistic/Mobile/Tracker";
 
@@ -19,7 +20,7 @@ const NAV_ORDER = [
 const navLinksMap = {
   Home: { href: "/", external: false as const },
   About: { href: "/about", external: false as const },
-  Services: { href: "/#services", external: false as const },
+  Services: { href: "/services", external: false as const },
   Tools: { href: "/#tools", external: false as const },
   Track: { href: TRACKER_URL, external: true as const },
   Contact: { href: "/#contact", external: false as const },
@@ -30,6 +31,12 @@ const navLinks = NAV_ORDER.map((label) => ({ label, ...navLinksMap[label] }));
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   const renderLink = (link: (typeof navLinks)[0]) => {
     if (link.external) {
@@ -44,7 +51,7 @@ const Navbar = () => {
         </a>
       );
     }
-    const isActive = link.href === "/about" ? location.pathname === "/about" : link.href === "/" ? location.pathname === "/" : false;
+    const isActive = link.href === "/about" ? location.pathname === "/about" : link.href === "/services" ? location.pathname === "/services" : link.href === "/" ? location.pathname === "/" : false;
     return (
       <Link
         to={link.href}
@@ -63,11 +70,8 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border w-full"
     >
       <div className="w-full flex items-center justify-between h-16 px-4 sm:px-6">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-display font-bold text-lg">R</span>
-          </div>
-          <span className="font-display font-bold text-xl text-foreground">Reliable</span>
+        <Link to="/" onClick={handleLogoClick} className="flex items-center shrink-0">
+          <img src={logoImage} alt="Reliable Logistics" className="h-12 w-auto max-w-[220px] object-contain" />
         </Link>
 
         {/* Desktop */}

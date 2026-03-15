@@ -39,8 +39,7 @@ const ToolsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-6"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-widest font-body">Quick Tools</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-3">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
             Real-Time Logistics Tools
           </h2>
         </motion.div>
@@ -164,24 +163,28 @@ const ToolsSection = () => {
                 >
                   <X className="h-5 w-5" />
                 </button>
-                {/* Row 1: From | To | Weight | VOLUME WEIGHT CALCULATOR */}
+                {/* Row 1: From Pincode | To Pincode | Weight | VOLUME WEIGHT CALCULATOR */}
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-end">
                   <div className="sm:col-span-3">
-                    <Label className="text-sm font-body font-semibold text-foreground">From*</Label>
+                    <Label className="text-sm font-body font-semibold text-foreground">From Pincode*</Label>
                     <Input
-                      placeholder="Enter a location"
+                      placeholder="Origin pincode (6 digits)"
                       className="h-12 mt-1 bg-white border-border"
                       value={transitForm.from}
                       onChange={(e) => setTransitForm((f) => ({ ...f, from: e.target.value }))}
+                      maxLength={6}
+                      inputMode="numeric"
                     />
                   </div>
                   <div className="sm:col-span-3">
-                    <Label className="text-sm font-body font-semibold text-foreground">To*</Label>
+                    <Label className="text-sm font-body font-semibold text-foreground">To Pincode*</Label>
                     <Input
-                      placeholder="Enter a location"
+                      placeholder="Destination pincode (6 digits)"
                       className="h-12 mt-1 bg-white border-border"
                       value={transitForm.to}
                       onChange={(e) => setTransitForm((f) => ({ ...f, to: e.target.value }))}
+                      maxLength={6}
+                      inputMode="numeric"
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -255,7 +258,7 @@ const ToolsSection = () => {
                       <div className="bg-teal-800 text-white px-6 py-4 font-display font-semibold">Transit Time & Price Finder</div>
                       <div className="px-6 py-5 text-foreground font-body text-sm space-y-3 bg-muted/30">
                         <p>
-                          Use this tool to check transit times and indicative prices for your shipment. Enter origin, destination, weight, and booking details to get results. For volume weight and special cargo, use the Volume Weight Calculator.
+                          Use this tool to check transit times and indicative prices for your shipment. Enter origin pincode, destination pincode, weight, and booking details to get results. For volume weight and special cargo, use the Volume Weight Calculator.
                         </p>
                         <p>Results are indicative; final charges may vary based on actual weight, dimensions, and service selected.</p>
                       </div>

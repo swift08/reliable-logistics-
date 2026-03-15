@@ -1,38 +1,36 @@
 import { motion } from "framer-motion";
-import { Headphones, FileText, UserCheck, Users, Plane, Truck } from "lucide-react";
+import { Train, Plane, Truck, Lock, Shield, Award } from "lucide-react";
 
 const reasons = [
   {
-    icon: Headphones,
-    title: "Customer Service",
-    description: "24/7 customer service availability by trained customer care staffs to attend queries.",
-  },
-  {
-    icon: FileText,
-    title: "Flexible Pricing/ARC",
-    description: "Shipments on To Pay/To be billed/Paid Basis. Annual rate contract for high volume corporate customer.",
-  },
-  {
-    icon: UserCheck,
-    title: "Key Account Mangement",
-    description: "We deploy KAM for high volume corporate customers",
-  },
-  {
-    icon: Users,
-    title: "Expert Staff",
-    description:
-      "Deployment of trained staff for easy shipment documentation to our customers. Experienced and expert personnel for each department in logistics stream.",
+    icon: Train,
+    title: "Rail Express",
+    description: "Fast, economical, and reliable: door-to-door service, climate-controlled handling, certified handlers, and authorized Indian Railways lease holders for dedicated wagons across major locations.",
   },
   {
     icon: Plane,
-    title: "Air/Rail Services",
-    description:
-      "We are one of the best in AIR / RAIL service as we have dedicated wagon and space hired in Air / Rail Cargo help to deliver on time every time.",
+    title: "Air Express",
+    description: "15-hour delivery benchmark to major cities; guaranteed next-day delivery with early morning and pre-noon options. Nationwide coverage and advanced cargo handling for safe, efficient movement.",
   },
   {
     icon: Truck,
-    title: "Ground Shipping",
-    description: "Full and dedicated vehicles, Trailer Service, express deliveries, specialized vehicles.",
+    title: "Road Express",
+    description: "Modern fleet of 150+ vehicles with door-to-door and hub-and-spoke operations; expert handling for heavy motors, panels, and solar equipment; uncompromised safety standards and specialized staff training.",
+  },
+  {
+    icon: Lock,
+    title: "Critical Shipment Expertise",
+    description: "Specialized handling protocols for high-value, fragile, and sensitive goods requiring maximum security and precision.",
+  },
+  {
+    icon: Shield,
+    title: "IBA Approved Transporter",
+    description: "Certified by the Indian Banks' Association, guaranteeing the highest standards of financial security and trust in transit.",
+  },
+  {
+    icon: Award,
+    title: "ISO 9001",
+    description: "Internationally recognized quality management systems driving continuous improvement and zero-defect operations.",
   },
 ];
 
@@ -46,11 +44,10 @@ const WhyChooseSection = () => {
           viewport={{ once: true }}
           className="text-center mb-6"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-widest font-body">Why Us</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-3">
-            Why Choose Us
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
+            Key Differentiators
           </h2>
-          <p className="text-muted-foreground font-body mt-2">Top Logistics Solutions in INDIA</p>
+          <p className="text-muted-foreground font-body mt-2">What sets Reliable Logistics apart</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

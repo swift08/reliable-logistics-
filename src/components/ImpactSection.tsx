@@ -3,7 +3,7 @@ import impactImage from "@/assets/impact-night.jpg";
 
 const ImpactSection = () => {
   return (
-    <section className="relative h-[500px] md:h-[600px] overflow-hidden w-full max-w-full">
+    <section className="relative h-[320px] md:h-[380px] min-h-0 overflow-hidden w-full">
       <img
         src={impactImage}
         alt="Logistics operations at night"
@@ -19,13 +19,13 @@ const ImpactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl w-full"
+          className="max-w-xl w-full"
         >
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-section-dark-foreground leading-tight mb-6">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-section-dark-foreground leading-tight mb-3">
             While The World Sleeps,{" "}
             <span className="text-gradient-red">We Keep Deliveries Moving</span>
           </h2>
-          <p className="text-lg md:text-xl text-section-dark-foreground/70 font-body">
+          <p className="text-sm md:text-base text-section-dark-foreground/70 font-body">
             Your shipment arrives exactly when it should.
           </p>
         </motion.div>

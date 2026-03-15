@@ -1,17 +1,24 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-// Use public/clients/ so filenames with spaces work. Copy from src/assets into public/clients/:
-// - abb.webp, BHEL.png, ZOMATO.webp (same name)
-// - "BHARATH electronics.webp" → save as BHARATH-electronics.webp
-// - "ZUARI cement.png" → save as ZUARI-cement.png
-const clients = [
+// Logos from public/clients
+const publicClients = [
   { name: "ABB", logo: "/clients/abb.webp" },
   { name: "BHEL", logo: "/clients/BHEL.png" },
   { name: "Bharath Electronics", logo: "/clients/BHARATH-electronics.jpg" },
   { name: "Zomato", logo: "/clients/ZOMATO.webp" },
   { name: "Zuari Cement", logo: "/clients/ZUARI-cement.png" },
 ];
+
+// Logos from src/assets/companies (imported via Vite glob)
+const companyModules = import.meta.glob("../assets/companies/*", { eager: true });
+const assetClients = Object.entries(companyModules).map(([path, mod]) => {
+  const name = path.split("/").pop()?.replace(/\.[^.]+$/, "").replace(/^id[-_a-zA-Z0-9]+_?/, "") || "Client";
+  const logo = (mod as { default: string }).default;
+  return { name, logo };
+});
+
+const clients = [...publicClients, ...assetClients];
 
 // Duplicate for seamless loop (news ticker: one behind another)
 const clientsLoop = [...clients, ...clients];
@@ -30,16 +37,13 @@ const ClientsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-widest font-body">
-            Our Clients
-          </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-3">
-            Our Clients
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground border-b-2 border-primary pb-1 inline-block">
+            Our Client Portfolio
           </h2>
-          <p className="text-muted-foreground font-body mt-2">Some of our esteemed clients</p>
+          <p className="text-muted-foreground font-body mt-3">Trusted by India's leading enterprises across diverse sectors.</p>
         </motion.div>
 
-        <div className="relative w-full overflow-hidden [contain:layout_paint]">
+        <div className="relative w-full overflow-hidden [contain:layout_paint] mb-12">
           <motion.div
             className="flex items-center justify-center gap-6 md:gap-8 shrink-0 w-[max-content]"
             style={{ width: "max-content", willChange: "transform" }}
@@ -78,6 +82,7 @@ const ClientsSection = () => {
             ))}
           </motion.div>
         </div>
+
       </div>
     </section>
   );

@@ -10,23 +10,23 @@ import heroVan from "@/assets/hero-delivery-van.jpg";
 const slides = [
   {
     image: heroTruck,
-    headline: "WE PROVIDE FASTEST & AFFORDABLE TRANSPORT SERVICES",
-    subtext: "Our \"GO ANYWHERE\" attitude ensures on time deliveries to all locations across INDIA.",
+    headline: "Fostering Stronger Connections",
+    subtext: "India's most trusted logistics partner, connecting businesses, people, and communities through reliability, innovation, and efficiency.",
   },
   {
     image: heroTruck,
-    headline: "Delivering Trust Before The Day Begins",
-    subtext: "Reliable logistics solutions across India with speed, safety and commitment.",
+    headline: "World-Class Logistics Solutions",
+    subtext: "Setting new standards for efficiency, reliability, and customer satisfaction across India.",
   },
   {
     image: heroAirplane,
     headline: "Air Freight That Moves At The Speed Of Business",
-    subtext: "Express air cargo services connecting cities nationwide.",
+    subtext: "Express air cargo services connecting cities nationwide with operational excellence.",
   },
   {
     image: heroVan,
     headline: "We Don't Just Deliver Packages.\nWe Deliver Promises.",
-    subtext: "From warehouse to doorstep. Right on time.",
+    subtext: "From warehouse to doorstep. Building enduring partnerships at every touchpoint.",
   },
 ];
 
@@ -42,7 +42,7 @@ const HeroSection = () => {
   }, [next]);
 
   return (
-    <section className="relative h-[100vh] min-h-[600px] w-full overflow-hidden left-0 right-0">
+    <section id="hero" className="relative h-[100vh] min-h-[600px] w-full overflow-hidden left-0 right-0 scroll-mt-0">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}

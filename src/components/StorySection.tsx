@@ -29,15 +29,14 @@ const StorySection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center w-full"
           >
-            <span className="text-primary font-semibold text-sm uppercase tracking-widest font-body">Our Story</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-3 mb-6">
-              Every Package Has A Story
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">
+              Fostering Stronger Connections
             </h2>
             <p className="text-muted-foreground font-body text-lg leading-relaxed mb-6">
-              Reliable Logistics was built with a simple belief: deliver every shipment with care, speed and trust.
+              We are committed to building meaningful relationships that drive growth, enhance collaboration, and deliver exceptional value at every touchpoint.
             </p>
             <p className="text-muted-foreground font-body text-lg leading-relaxed mb-8">
-              From small packages to large freight, we connect businesses and people through dependable logistics solutions across India and beyond.
+              Trusted by India's leading enterprises across diverse sectors, from Government and Defence to solar and critical infrastructure. We lead the logistics industry with reliability, innovation, and operational excellence.
             </p>
             <div className="flex flex-wrap gap-8 sm:gap-12 justify-center">
               <div>

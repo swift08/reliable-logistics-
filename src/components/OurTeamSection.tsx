@@ -24,8 +24,7 @@ const OurTeamSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-widest font-body">Our Team</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-3">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
             Leadership & Departments
           </h2>
           <p className="text-muted-foreground font-body mt-2 max-w-2xl mx-auto">
